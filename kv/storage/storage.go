@@ -20,3 +20,8 @@ type StorageReader interface {
 	IterCF(cf string) engine_util.DBIterator
 	Close()
 }
+
+//新加
+type StandAloneReader struct {
+	kvTxn *badger.Txn
+}
